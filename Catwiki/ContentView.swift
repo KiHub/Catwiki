@@ -12,12 +12,14 @@ struct ContentView: View {
     var body: some View {
         if breedFetcher.isLoading {
             LoadingView()
+            
         } else if breedFetcher.errorMessage != nil {
             ErrorView(breedFetcher: breedFetcher)
         } else {
             BreedListView(breeds: breedFetcher.breeds)
         }
-           
+      
+        
     }
 }
 
@@ -26,3 +28,5 @@ struct ContentView_Previews: PreviewProvider {
         ContentView()
     }
 }
+
+

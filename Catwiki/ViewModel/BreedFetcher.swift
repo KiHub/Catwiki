@@ -20,6 +20,7 @@ class BreedFetcher: ObservableObject {
     func fetchAllBreeds() {
         
         isLoading = true
+       // errorMessage = nil
 
         let service = NetworkService()
         let url = URL(string: "https://api.thecatapi.com/v1/breeds")
@@ -39,6 +40,7 @@ class BreedFetcher: ObservableObject {
         
         service.fetch([Breed].self, url: url) { [unowned self] result in
             DispatchQueue.main.async {
+                self.isLoading = false
                 switch result {
                 case .failure(let error):
                     self.errorMessage = error.localizedDescription

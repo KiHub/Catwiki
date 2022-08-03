@@ -14,7 +14,6 @@ struct LoadingView: View {
             ProgressView()
             Text("Loading...").foregroundColor(.gray)
         }
-        
     }
 }
 
