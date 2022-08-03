@@ -58,7 +58,7 @@ struct NetworkService {
                         let breeds = try decoder.decode([Breed].self, from: data)
                         completion(Result.success(breeds))
                     } catch {
-                        completion(Result.failure(NetworkError.parsing(error as! DecodingError)))
+                        completion(Result.failure(NetworkError.parsing(error as? DecodingError)))
                     }
                 
             }

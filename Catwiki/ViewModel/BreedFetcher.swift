@@ -23,8 +23,9 @@ class BreedFetcher: ObservableObject {
 
         let service = NetworkService()
         let url = URL(string: "https://api.thecatapi.com/v1/breeds")
-        
-//        service.fetchBreeds(url: url) { result in
+       
+//        service.fetchBreeds(url: url) { [unowned self] result in
+//            DispatchQueue.main.async {
 //            switch result {
 //            case .failure(let error):
 //                self.errorMessage = error.localizedDescription
@@ -34,19 +35,35 @@ class BreedFetcher: ObservableObject {
 //                self.breeds = breeds
 //            }
 //        }
+//        }
         
-        service.fetch([Breed].self, url: url) { result in
-            switch result {
-            case .failure(let error):
-                self.errorMessage = error.localizedDescription
-                print(error.description)
-                print(error)
-            case .success(let breeds):
-                self.breeds = breeds
+        service.fetch([Breed].self, url: url) { [unowned self] result in
+            DispatchQueue.main.async {
+                switch result {
+                case .failure(let error):
+                    self.errorMessage = error.localizedDescription
+                    print(error.description)
+                    print(error)
+                case .success(let breeds):
+                    self.breeds = breeds
+                }
             }
+
+
         }
         
     }
     
+    static func errorState() -> BreedFetcher {
+        let fetcher = BreedFetcher()
+        fetcher.errorMessage = NetworkError.url(URLError.init(.notConnectedToInternet)).localizedDescription
+        return fetcher
+    }
     
+    static func successState() -> BreedFetcher {
+        let fetcher = BreedFetcher()
+      //  fetcher.breeds = [Breed.example1(), Breed.example2()]
+        fetcher.breeds = BreedFetcher.successState().breeds
+        return fetcher
+    }
 }
