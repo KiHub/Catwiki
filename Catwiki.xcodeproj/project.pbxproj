@@ -24,6 +24,7 @@
 		0B86BADC289AD70400F3009E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B86BADB289AD70400F3009E /* NetworkService.swift */; };
 		0B86BADE289BAB2D00F3009E /* BreedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B86BADD289BAB2D00F3009E /* BreedRow.swift */; };
 		0B86BAE0289BABB300F3009E /* BreedDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B86BADF289BABB300F3009E /* BreedDetailView.swift */; };
+		0B86BAE3289BDB8000F3009E /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B86BAE2289BDB8000F3009E /* ButtonStyle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -64,6 +65,7 @@
 		0B86BADB289AD70400F3009E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		0B86BADD289BAB2D00F3009E /* BreedRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedRow.swift; sourceTree = "<group>"; };
 		0B86BADF289BABB300F3009E /* BreedDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailView.swift; sourceTree = "<group>"; };
+		0B86BAE2289BDB8000F3009E /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,6 +118,7 @@
 			children = (
 				0B86BAA0289ABBD500F3009E /* CatwikiApp.swift */,
 				0B86BAA2289ABBD500F3009E /* ContentView.swift */,
+				0B86BAE1289BDB5B00F3009E /* Helpers */,
 				0B86BACC289ABC7800F3009E /* ViewModel */,
 				0B86BACB289ABC7100F3009E /* Model */,
 				0B86BACA289ABC6800F3009E /* View */,
@@ -179,6 +182,14 @@
 				0B86BADB289AD70400F3009E /* NetworkService.swift */,
 			);
 			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		0B86BAE1289BDB5B00F3009E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				0B86BAE2289BDB8000F3009E /* ButtonStyle.swift */,
+			);
+			path = Helpers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -311,6 +322,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0B86BAE3289BDB8000F3009E /* ButtonStyle.swift in Sources */,
 				0B86BADC289AD70400F3009E /* NetworkService.swift in Sources */,
 				0B86BAD0289ABDC200F3009E /* BreedImage.swift in Sources */,
 				0B86BADE289BAB2D00F3009E /* BreedRow.swift in Sources */,

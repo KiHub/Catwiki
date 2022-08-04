@@ -10,7 +10,7 @@ import SwiftUI
 struct BreedRow: View {
     let breed: Breed
     let imageSize: CGFloat = 100
-    @State private var scale: CGFloat = 0.9
+    let scale: CGFloat = 0.9
     var body: some View {
         HStack {
             
@@ -32,10 +32,10 @@ struct BreedRow: View {
                             .shadow(color: .gray, radius: 10, x: 5, y: 5)
                             .saturation(0.5)
                             .scaleEffect(scale)
-                        Text("❌")
-                            .frame(width: imageSize, height: imageSize)
+                        Text("❌")  
                             .font(.system(size: 70))
                             .scaledToFill()
+                            .frame(width: imageSize, height: imageSize)
                         }
                     } else {
                        ProgressView()
