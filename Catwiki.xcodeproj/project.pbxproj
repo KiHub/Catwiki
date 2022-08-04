@@ -22,6 +22,8 @@
 		0B86BAD8289AC45D00F3009E /* LoadingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B86BAD7289AC45D00F3009E /* LoadingView.swift */; };
 		0B86BADA289AC9C600F3009E /* NetworkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B86BAD9289AC9C600F3009E /* NetworkError.swift */; };
 		0B86BADC289AD70400F3009E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B86BADB289AD70400F3009E /* NetworkService.swift */; };
+		0B86BADE289BAB2D00F3009E /* BreedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B86BADD289BAB2D00F3009E /* BreedRow.swift */; };
+		0B86BAE0289BABB300F3009E /* BreedDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B86BADF289BABB300F3009E /* BreedDetailView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +62,8 @@
 		0B86BAD7289AC45D00F3009E /* LoadingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingView.swift; sourceTree = "<group>"; };
 		0B86BAD9289AC9C600F3009E /* NetworkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkError.swift; sourceTree = "<group>"; };
 		0B86BADB289AD70400F3009E /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		0B86BADD289BAB2D00F3009E /* BreedRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedRow.swift; sourceTree = "<group>"; };
+		0B86BADF289BABB300F3009E /* BreedDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -152,6 +156,8 @@
 				0B86BAD3289AC38C00F3009E /* BreedListView.swift */,
 				0B86BAD5289AC3A200F3009E /* ErrorView.swift */,
 				0B86BAD7289AC45D00F3009E /* LoadingView.swift */,
+				0B86BADD289BAB2D00F3009E /* BreedRow.swift */,
+				0B86BADF289BABB300F3009E /* BreedDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -307,7 +313,9 @@
 			files = (
 				0B86BADC289AD70400F3009E /* NetworkService.swift in Sources */,
 				0B86BAD0289ABDC200F3009E /* BreedImage.swift in Sources */,
+				0B86BADE289BAB2D00F3009E /* BreedRow.swift in Sources */,
 				0B86BACE289ABCB500F3009E /* CatBreed.swift in Sources */,
+				0B86BAE0289BABB300F3009E /* BreedDetailView.swift in Sources */,
 				0B86BAA3289ABBD500F3009E /* ContentView.swift in Sources */,
 				0B86BAD2289ABE5D00F3009E /* BreedFetcher.swift in Sources */,
 				0B86BAD6289AC3A200F3009E /* ErrorView.swift in Sources */,
