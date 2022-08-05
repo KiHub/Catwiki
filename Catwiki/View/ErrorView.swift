@@ -26,20 +26,6 @@ struct ErrorView: View {
     }
 }
 
-//struct RoundedRectangleButtonStyle: ButtonStyle {
-//  func makeBody(configuration: Configuration) -> some View {
-//    Button(action: {}, label: {
-//      HStack {
-//        Spacer()
-//        configuration.label.foregroundColor(.black)
-//        Spacer()
-//      }
-//    })
-//    .padding()
-//    .background(Color.yellow.cornerRadius(8))
-//    .scaleEffect(configuration.isPressed ? 0.95 : 1)
-//  }
-//}
 
 struct ErrorView_Previews: PreviewProvider {
     static var previews: some View {

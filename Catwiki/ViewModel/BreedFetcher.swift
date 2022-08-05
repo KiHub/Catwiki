@@ -20,23 +20,23 @@ class BreedFetcher: ObservableObject {
     func fetchAllBreeds() {
         
         isLoading = true
-       // errorMessage = nil
-
+        // errorMessage = nil
+        
         let service = NetworkService()
         let url = URL(string: "https://api.thecatapi.com/v1/breeds")
-       
-//        service.fetchBreeds(url: url) { [unowned self] result in
-//            DispatchQueue.main.async {
-//            switch result {
-//            case .failure(let error):
-//                self.errorMessage = error.localizedDescription
-//                print(error.description)
-//                print(error)
-//            case .success(let breeds):
-//                self.breeds = breeds
-//            }
-//        }
-//        }
+        
+        //        service.fetchBreeds(url: url) { [unowned self] result in
+        //            DispatchQueue.main.async {
+        //            switch result {
+        //            case .failure(let error):
+        //                self.errorMessage = error.localizedDescription
+        //                print(error.description)
+        //                print(error)
+        //            case .success(let breeds):
+        //                self.breeds = breeds
+        //            }
+        //        }
+        //        }
         
         service.fetch([Breed].self, url: url) { [unowned self] result in
             DispatchQueue.main.async {
@@ -50,8 +50,8 @@ class BreedFetcher: ObservableObject {
                     self.breeds = breeds
                 }
             }
-
-
+            
+            
         }
         
     }
@@ -64,8 +64,8 @@ class BreedFetcher: ObservableObject {
     
     static func successState() -> BreedFetcher {
         let fetcher = BreedFetcher()
-      //  fetcher.breeds = [Breed.example1(), Breed.example2()]
-        fetcher.breeds = BreedFetcher.successState().breeds
+        //  fetcher.breeds = [Breed.example1(), Breed.example2()]
+        //  fetcher.breeds = BreedFetcher.successState().breeds
         return fetcher
     }
 }

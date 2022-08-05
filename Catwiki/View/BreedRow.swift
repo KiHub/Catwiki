@@ -27,32 +27,32 @@ struct BreedRow: View {
                             .scaleEffect(scale)
                     } else if phase.error != nil {
                         ZStack {
-                        Color.red.frame(width: imageSize, height: imageSize)
-                            .clipShape(RoundedRectangle(cornerRadius: 25.0))
-                            .shadow(color: .gray, radius: 10, x: 5, y: 5)
-                            .saturation(0.5)
-                            .scaleEffect(scale)
-                        Text("❌")  
-                            .font(.system(size: 70))
-                            .scaledToFill()
-                            .frame(width: imageSize, height: imageSize)
+                            Color.red.frame(width: imageSize, height: imageSize)
+                                .clipShape(RoundedRectangle(cornerRadius: 25.0))
+                                .shadow(color: .gray, radius: 10, x: 5, y: 5)
+                                .saturation(0.5)
+                                .scaleEffect(scale)
+                            Text("❌")  
+                                .font(.system(size: 70))
+                                .scaledToFill()
+                                .frame(width: imageSize, height: imageSize)
                         }
                     } else {
-                       ProgressView()
+                        ProgressView()
                             .frame(width: imageSize, height: imageSize)
                     }
                 }
             } else {
                 ZStack {
-                Color.gray.frame(width: imageSize, height: imageSize)
-                    .clipShape(RoundedRectangle(cornerRadius: 25.0))
-                    .shadow(color: .gray, radius: 10, x: 5, y: 5)
-                    .saturation(0.5)
-                    .scaleEffect(scale)
+                    Color.gray.frame(width: imageSize, height: imageSize)
+                        .clipShape(RoundedRectangle(cornerRadius: 25.0))
+                        .shadow(color: .gray, radius: 10, x: 5, y: 5)
+                        .saturation(0.5)
+                        .scaleEffect(scale)
                     Text("🐱")
                         .font(.system(size: 70))
                         .scaledToFill()
-                    .frame(width: imageSize, height: imageSize)
+                        .frame(width: imageSize, height: imageSize)
                 }
             }
             

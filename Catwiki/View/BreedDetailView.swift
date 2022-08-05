@@ -21,21 +21,21 @@ struct BreedDetailView: View {
                         if let image = phase.image {
                             image.resizable()
                                 .scaledToFit()
-                                //.frame(width: imageSize, height: imageSize)
+                            //.frame(width: imageSize, height: imageSize)
                                 .clipShape(RoundedRectangle(cornerRadius: 25.0))
                                 .clipped()
                                 .shadow(color: .gray, radius: 10, x: 5, y: 5)
                                 .saturation(0.5)
-                              .scaleEffect(scale)
-                                
+                                .scaleEffect(scale)
+                            
                         } else if phase.error != nil {
                             ZStack {
                                 Color.red
-                                    //.frame(width: imageSize, height: imageSize)
+                                //.frame(width: imageSize, height: imageSize)
                                     .clipShape(RoundedRectangle(cornerRadius: 25.0))
                                     .shadow(color: .gray, radius: 10, x: 5, y: 5)
                                     .saturation(0.5)
-                                 .scaleEffect(scale)
+                                    .scaleEffect(scale)
                                 Text("❌")
                                     .font(.system(size: 70))
                                     .scaledToFill()
@@ -50,11 +50,11 @@ struct BreedDetailView: View {
                 } else {
                     ZStack {
                         Color.gray
-                           // .frame(width: imageSize, height: imageSize)
+                        // .frame(width: imageSize, height: imageSize)
                             .clipShape(RoundedRectangle(cornerRadius: 25.0))
                             .shadow(color: .gray, radius: 10, x: 5, y: 5)
                             .saturation(0.5)
-                          .scaleEffect(scale)
+                            .scaleEffect(scale)
                         Text("🐱")
                             .font(.system(size: 70))
                             .scaledToFill()

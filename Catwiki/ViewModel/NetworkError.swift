@@ -35,7 +35,7 @@ enum NetworkError: Error, CustomStringConvertible {
         case .badURL:
             return "URL error"
         case .badResponse(statusCode: let statusCode):
-           return "bad responce: \(statusCode)"
+            return "bad responce: \(statusCode)"
         case .url(let error):
             return error.localizedDescription
         case .parsing(let error):

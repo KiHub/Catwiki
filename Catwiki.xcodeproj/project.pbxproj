@@ -25,6 +25,11 @@
 		0B86BADE289BAB2D00F3009E /* BreedRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B86BADD289BAB2D00F3009E /* BreedRow.swift */; };
 		0B86BAE0289BABB300F3009E /* BreedDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B86BADF289BABB300F3009E /* BreedDetailView.swift */; };
 		0B86BAE3289BDB8000F3009E /* ButtonStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B86BAE2289BDB8000F3009E /* ButtonStyle.swift */; };
+		0B86BAE5289C249200F3009E /* NetworkMockService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B86BAE4289C249200F3009E /* NetworkMockService.swift */; };
+		0B86BAE7289C24E700F3009E /* NetworkServiceProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B86BAE6289C24E700F3009E /* NetworkServiceProtocol.swift */; };
+		0B86BAEC289CEB1B00F3009E /* BreedGreedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B86BAEB289CEB1A00F3009E /* BreedGreedView.swift */; };
+		0B86BAEE289CEB4600F3009E /* BreedCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B86BAED289CEB4600F3009E /* BreedCard.swift */; };
+		0B86BAF6289D0EC000F3009E /* FavManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B86BAF5289D0EC000F3009E /* FavManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +71,11 @@
 		0B86BADD289BAB2D00F3009E /* BreedRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedRow.swift; sourceTree = "<group>"; };
 		0B86BADF289BABB300F3009E /* BreedDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedDetailView.swift; sourceTree = "<group>"; };
 		0B86BAE2289BDB8000F3009E /* ButtonStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStyle.swift; sourceTree = "<group>"; };
+		0B86BAE4289C249200F3009E /* NetworkMockService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkMockService.swift; sourceTree = "<group>"; };
+		0B86BAE6289C24E700F3009E /* NetworkServiceProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkServiceProtocol.swift; sourceTree = "<group>"; };
+		0B86BAEB289CEB1A00F3009E /* BreedGreedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedGreedView.swift; sourceTree = "<group>"; };
+		0B86BAED289CEB4600F3009E /* BreedCard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedCard.swift; sourceTree = "<group>"; };
+		0B86BAF5289D0EC000F3009E /* FavManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -118,10 +128,10 @@
 			children = (
 				0B86BAA0289ABBD500F3009E /* CatwikiApp.swift */,
 				0B86BAA2289ABBD500F3009E /* ContentView.swift */,
-				0B86BAE1289BDB5B00F3009E /* Helpers */,
 				0B86BACC289ABC7800F3009E /* ViewModel */,
 				0B86BACB289ABC7100F3009E /* Model */,
 				0B86BACA289ABC6800F3009E /* View */,
+				0B86BAE1289BDB5B00F3009E /* Helpers */,
 				0B86BAA4289ABBD800F3009E /* Assets.xcassets */,
 				0B86BAA6289ABBD800F3009E /* Preview Content */,
 			);
@@ -156,10 +166,12 @@
 		0B86BACA289ABC6800F3009E /* View */ = {
 			isa = PBXGroup;
 			children = (
+				0B86BAEB289CEB1A00F3009E /* BreedGreedView.swift */,
 				0B86BAD3289AC38C00F3009E /* BreedListView.swift */,
 				0B86BAD5289AC3A200F3009E /* ErrorView.swift */,
 				0B86BAD7289AC45D00F3009E /* LoadingView.swift */,
 				0B86BADD289BAB2D00F3009E /* BreedRow.swift */,
+				0B86BAED289CEB4600F3009E /* BreedCard.swift */,
 				0B86BADF289BABB300F3009E /* BreedDetailView.swift */,
 			);
 			path = View;
@@ -180,6 +192,8 @@
 				0B86BAD1289ABE5D00F3009E /* BreedFetcher.swift */,
 				0B86BAD9289AC9C600F3009E /* NetworkError.swift */,
 				0B86BADB289AD70400F3009E /* NetworkService.swift */,
+				0B86BAE4289C249200F3009E /* NetworkMockService.swift */,
+				0B86BAE6289C24E700F3009E /* NetworkServiceProtocol.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -188,6 +202,7 @@
 			isa = PBXGroup;
 			children = (
 				0B86BAE2289BDB8000F3009E /* ButtonStyle.swift */,
+				0B86BAF5289D0EC000F3009E /* FavManager.swift */,
 			);
 			path = Helpers;
 			sourceTree = "<group>";
@@ -324,17 +339,22 @@
 			files = (
 				0B86BAE3289BDB8000F3009E /* ButtonStyle.swift in Sources */,
 				0B86BADC289AD70400F3009E /* NetworkService.swift in Sources */,
+				0B86BAE5289C249200F3009E /* NetworkMockService.swift in Sources */,
+				0B86BAEC289CEB1B00F3009E /* BreedGreedView.swift in Sources */,
 				0B86BAD0289ABDC200F3009E /* BreedImage.swift in Sources */,
 				0B86BADE289BAB2D00F3009E /* BreedRow.swift in Sources */,
+				0B86BAF6289D0EC000F3009E /* FavManager.swift in Sources */,
 				0B86BACE289ABCB500F3009E /* CatBreed.swift in Sources */,
 				0B86BAE0289BABB300F3009E /* BreedDetailView.swift in Sources */,
 				0B86BAA3289ABBD500F3009E /* ContentView.swift in Sources */,
+				0B86BAEE289CEB4600F3009E /* BreedCard.swift in Sources */,
 				0B86BAD2289ABE5D00F3009E /* BreedFetcher.swift in Sources */,
 				0B86BAD6289AC3A200F3009E /* ErrorView.swift in Sources */,
 				0B86BAD8289AC45D00F3009E /* LoadingView.swift in Sources */,
 				0B86BADA289AC9C600F3009E /* NetworkError.swift in Sources */,
 				0B86BAA1289ABBD500F3009E /* CatwikiApp.swift in Sources */,
 				0B86BAD4289AC38C00F3009E /* BreedListView.swift in Sources */,
+				0B86BAE7289C24E700F3009E /* NetworkServiceProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
