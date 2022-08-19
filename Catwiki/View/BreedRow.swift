@@ -32,7 +32,7 @@ struct BreedRow: View {
                                 .shadow(color: .gray, radius: 10, x: 5, y: 5)
                                 .saturation(0.5)
                                 .scaleEffect(scale)
-                            Text("❌")  
+                            Text("❌")
                                 .font(.system(size: 70))
                                 .scaledToFill()
                                 .frame(width: imageSize, height: imageSize)

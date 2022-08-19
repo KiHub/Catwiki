@@ -12,7 +12,6 @@ class BreedFetcher: ObservableObject {
     @Published var breeds = [Breed]()
     @Published var isLoading: Bool = false
     @Published var errorMessage: String? = nil
-    
     init() {
         fetchAllBreeds()
     }
@@ -50,8 +49,6 @@ class BreedFetcher: ObservableObject {
                     self.breeds = breeds
                 }
             }
-            
-            
         }
         
     }

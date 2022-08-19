@@ -86,6 +86,7 @@ struct BreedCard: View {
             Button {
                 print("Add to fav list")
                 
+                
             } label: {
                 Image(systemName: "heart.fill")
                     .padding(10)
@@ -94,11 +95,7 @@ struct BreedCard: View {
                     .cornerRadius(50)
                     .shadow(color: .gray, radius: 5, x: 1, y: 1)
                     .saturation(0.7)
-                //  .padding(10)
-                //  .scaleEffect(scale)
             }
-            
-            
         }
         .shadow(radius: 10)
     }

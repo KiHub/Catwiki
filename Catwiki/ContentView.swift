@@ -9,33 +9,27 @@ import SwiftUI
 
 struct ContentView: View {
     var colums = [GridItem(.adaptive(minimum: 160), spacing: 20)]
-  //  @StateObject var favManager = FavManager()
     @StateObject var breedFetcher = BreedFetcher()
     var body: some View {
-
+        
         if breedFetcher.isLoading {
             LoadingView()
         } else if breedFetcher.errorMessage != nil {
             ErrorView(breedFetcher: breedFetcher)
         } else {
-         //   BreedListView(breeds: breedFetcher.breeds)
             TabView {
-            BreedGreedView(breeds: breedFetcher.breeds, colums: colums)
+                BreedGreedView(breeds: breedFetcher.breeds, colums: colums)
                     .tabItem {
-                            Image(systemName: "book")
-                            Text("Wiki")
-                          }
+                        Image(systemName: "book")
+                        Text("Wiki")
+                    }
                 BreedListView(breeds: breedFetcher.breeds)
-//                FavListView()
-//                    .environmentObject(favManager)
-                     .tabItem {
+                    .tabItem {
                         Image(systemName: "heart")
                         Text("Your list")
-                      }
+                    }
             }
         }
-        
-        
     }
 }
 

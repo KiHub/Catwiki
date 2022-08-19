@@ -8,10 +8,10 @@
 import SwiftUI
 
 struct BreedGreedView: View {
-
+    
     let breeds: [Breed]
     @State private var searchText: String = ""
-  
+    
     var filtredBreds: [Breed] {
         if searchText.count == 0 {
             return breeds
@@ -25,13 +25,13 @@ struct BreedGreedView: View {
             ScrollView {
                 LazyVGrid(columns: colums, spacing: 20) {
                     ForEach(filtredBreds) { breed in
-                       
-                       
+                        
+                        
                         NavigationLink {
                             BreedDetailView(breed: breed)
                         } label: {
                             BreedCard(breed: breed)
-                               
+                            
                         }
                         
                     }
@@ -39,14 +39,6 @@ struct BreedGreedView: View {
                 .padding()
             }
             .navigationTitle(Text("CatWiki"))
-//            .toolbar {
-//                NavigationLink {
-//                    CartView()/Users/ki/Documents/App Brew/Catwiki/Catwiki/View/BreedGreedView.swift
-//                        .environmentObject(cartManager)
-//                } label: {
-//                    CartButton(numberOfProducts: cartManager.products.count)
-//                }
-//            }
         }
         .navigationViewStyle(StackNavigationViewStyle())
         .searchable(text: $searchText)

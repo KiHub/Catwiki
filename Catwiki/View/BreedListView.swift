@@ -19,28 +19,21 @@ struct BreedListView: View {
     }
     
     var body: some View {
-        ZStack {
-            LinearGradient(gradient: Gradient(colors: [.purple, .orange]), startPoint: .top, endPoint: .bottom)
-                .ignoresSafeArea()
-            
-            NavigationView {
-                List {
-                    ForEach(filtredBreds) { breed in
-                        NavigationLink {
-                            BreedDetailView(breed: breed)
-                        } label: {
-                            BreedRow(breed: breed)
-                        }
+        
+        NavigationView {
+            List {
+                ForEach(filtredBreds) { breed in
+                    NavigationLink {
+                        BreedDetailView(breed: breed)
+                    } label: {
+                        BreedRow(breed: breed)
                     }
-                    
-                    // .listRowBackground(Color.clear)
-                    //  .foregroundColor(Color.white)
-                    .listRowSeparator(.hidden)
-                    
                 }
-                .navigationTitle("Catwiki")
-                .searchable(text: $searchText)
+                
+                .listRowSeparator(.hidden)
+                
             }
+            .navigationTitle("CatWiki")
         }
     }
 }
@@ -50,3 +43,4 @@ struct BreedListView_Previews: PreviewProvider {
         BreedListView(breeds: BreedFetcher.successState().breeds)
     }
 }
+

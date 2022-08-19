@@ -21,7 +21,6 @@ struct BreedDetailView: View {
                         if let image = phase.image {
                             image.resizable()
                                 .scaledToFit()
-                            //.frame(width: imageSize, height: imageSize)
                                 .clipShape(RoundedRectangle(cornerRadius: 25.0))
                                 .clipped()
                                 .shadow(color: .gray, radius: 10, x: 5, y: 5)
@@ -43,14 +42,13 @@ struct BreedDetailView: View {
                             }
                         } else {
                             ProgressView()
-                            //     .frame(width: imageSize, height: imageSize)
+                            
                         }
                     }
                     
                 } else {
                     ZStack {
                         Color.gray
-                        // .frame(width: imageSize, height: imageSize)
                             .clipShape(RoundedRectangle(cornerRadius: 25.0))
                             .shadow(color: .gray, radius: 10, x: 5, y: 5)
                             .saturation(0.5)
@@ -79,10 +77,20 @@ struct BreedDetailView: View {
                                 .foregroundColor(breed.energyLevel > id ? Color.accentColor : Color.gray)
                         }
                     }
-                    Spacer()
                     
                 }.padding()
                     .navigationBarTitleDisplayMode(.inline)
+            }
+        }
+        
+        .toolbar {
+            ToolbarItemGroup(placement: .navigationBarTrailing) {
+                Button {
+                    //     print("Save")
+                    
+                } label: {
+                    Image(systemName: "heart.fill")
+                }
             }
         }
     }
