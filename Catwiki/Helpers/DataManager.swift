@@ -40,13 +40,6 @@ class DataManager: ObservableObject {
         cat.temperament = temperament
         cat.date  = Date()
         
-    
-        
-//        food.id = UUID()
-//        food.date = Date()
-//        food.name = name
-//        food.calories = calories
-        
         save(context: context)
         
     }
@@ -60,13 +53,7 @@ class DataManager: ObservableObject {
         cat.name = name
         cat.temperament = temperament
         cat.date  = Date()
-    
-//        food.date = Date()
-//        food.name = name
-//        food.calories = calories
         
         save(context: context)
     }
-    
-    
 }

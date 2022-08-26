@@ -15,7 +15,6 @@ extension Item {
     @nonobjc public class func fetchRequest() -> NSFetchRequest<Item> {
         return NSFetchRequest<Item>(entityName: "Item")
     }
-
     @NSManaged public var breedExplaination: String?
     @NSManaged public var energyLevel: Int64
     @NSManaged public var id: String?

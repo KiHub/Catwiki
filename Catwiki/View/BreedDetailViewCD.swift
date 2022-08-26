@@ -8,18 +8,14 @@
 import SwiftUI
 import CoreData
 
-
 struct BreedDetailViewCD: View {
     
     @Environment (\.managedObjectContext) var managedObjectContext
     @Environment(\.dismiss) var dismiss
-   
+    
     let breed: FetchedResults<Item>.Element
- //   let coreDataManager: CoreDataManager
     let imageSize: CGFloat = 300
     let scale: CGFloat = 0.9
-    @State var savedBreeds: [Item] = []
-    @Environment(\.managedObjectContext) var context
     
     var body: some View {
         
@@ -39,7 +35,6 @@ struct BreedDetailViewCD: View {
                         } else if phase.error != nil {
                             ZStack {
                                 Color.red
-                                //.frame(width: imageSize, height: imageSize)
                                     .clipShape(RoundedRectangle(cornerRadius: 25.0))
                                     .shadow(color: .gray, radius: 10, x: 5, y: 5)
                                     .saturation(0.5)
@@ -54,7 +49,6 @@ struct BreedDetailViewCD: View {
                             
                         }
                     }
-                    
                 } else {
                     ZStack {
                         Color.gray
@@ -91,60 +85,7 @@ struct BreedDetailViewCD: View {
                     .navigationBarTitleDisplayMode(.inline)
             }
         }
-        
-//        .toolbar {
-//            ToolbarItemGroup(placement: .navigationBarTrailing) {
-//                Button {
-//                    breed.map { breed[$0] }.forEach(managedObjectContext.delete)
-//                    DataManager().save(context: managedObjectContext)
-////                    DataManager().addCat(breedExplaination: breed.breedExplaination, energyLevel: Int64(breed.energyLevel), id: breed.id, image: breed.image?.url ?? "", isHairless: breed.isHairless, name: breed.name, temperament: breed.temperament, context: managedObjectContext)
-//                    dismiss()
-//                    //     print("Save")
-//                 //   coreDataManager.saveData(context: context)
-//
-////                    func saveData(context: NSManagedObjectContext) {
-////
-////                       // let breed: Breed
-////                        let entity = Item(context: context)
-////                        entity.name = breed.name
-////                        entity.id = breed.id
-////                        entity.image = breed.image?.url
-////                        entity.breedExplaination = breed.breedExplaination
-////                        entity.energyLevel = Int64(breed.energyLevel)
-////                        entity.temperament = breed.temperament
-////                        entity.isHairless = breed.isHairless
-////
-////                        savedBreeds.append(entity)
-////
-////
-////                        do {
-//////                            try context.save()
-//////                            print("Success")
-//////
-//////                            if context.hasChanges {
-//////                                print(entity.name)
-//////                            }
-////
-////
-////                        } catch {
-////                            print(error.localizedDescription)
-////                        }
-////
-////                    }
-////                    saveData(context: context)
-//
-//                } label: {
-//                    Image(systemName: "heart")
-//                }
-//            }
-//        }
     }
 }
 
-//
-//struct BreedDetailViewCD_Previews: PreviewProvider {
-//    static var previews: some View {
-//        BreedDetailViewCD(breed: Breed.example1())
-//    }
-//}
 

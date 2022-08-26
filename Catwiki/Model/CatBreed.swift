@@ -7,10 +7,7 @@
 
 import Foundation
 
-
-
 struct Breed: Codable, CustomStringConvertible, Identifiable {
-    
     
     let id: String
     let name: String
@@ -49,7 +46,6 @@ struct Breed: Codable, CustomStringConvertible, Identifiable {
         image = try values.decodeIfPresent(BreedImage.self, forKey: .image)
     }
     
-    
     init(name: String, id: String, explaination: String, temperament: String,
          energyLevel: Int, isHairless: Bool, image: BreedImage?){
         self.name = name
@@ -60,7 +56,6 @@ struct Breed: Codable, CustomStringConvertible, Identifiable {
         self.image = image
         self.isHairless = isHairless
     }
-    
     
     static func example1() -> Breed {
         return Breed(name: "Abyssinian",
@@ -82,8 +77,5 @@ struct Breed: Codable, CustomStringConvertible, Identifiable {
                      image: BreedImage(height: 100, id: "i", url: "https://cdn2.thecatapi.com/images/unX21IBVB.jpg", width: 100))
         
     }
-    
-    
-    
 }
 
