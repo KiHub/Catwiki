@@ -1,20 +1,20 @@
 //
-//  BreedRow.swift
+//  BreedRowCD.swift
 //  Catwiki
 //
-//  Created by  Mr.Ki on 04.08.2022.
+//  Created by  Mr.Ki on 20.08.2022.
 //
 
 import SwiftUI
 
-struct BreedRow: View {
-    let breed: Breed
+struct BreedRowCD: View {
+    let breed: FetchedResults<Item>.Element
     let imageSize: CGFloat = 100
     let scale: CGFloat = 0.9
     var body: some View {
         HStack {
             
-            if let url = breed.image?.url {
+            if let url = breed.image {
                 AsyncImage(url: URL(string: url)) { phase in
                     if let image = phase.image {
                         image.resizable()

@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct BreedCard: View {
+    @Environment (\.managedObjectContext) var managedObjectContext
     
     let breed: Breed
     let imageSize: CGFloat = 180
@@ -85,7 +86,7 @@ struct BreedCard: View {
             
             Button {
                 print("Add to fav list")
-                
+                DataManager().addCat(breedExplaination: breed.breedExplaination, energyLevel: Int64(breed.energyLevel), id: breed.id, image: breed.image?.url ?? "", isHairless: breed.isHairless, name: breed.name, temperament: breed.temperament, context: managedObjectContext)
                 
             } label: {
                 Image(systemName: "heart.fill")

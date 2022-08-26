@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21C52" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Favorite" representedClassName="Favorite" syncable="YES">
+    <entity name="Item" representedClassName="Item" syncable="YES">
         <attribute name="breedExplaination" optional="YES" attributeType="String"/>
+        <attribute name="date" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="energyLevel" optional="YES" attributeType="Integer 64" defaultValueString="0" usesScalarValueType="YES"/>
         <attribute name="id" attributeType="String"/>
         <attribute name="image" optional="YES" attributeType="String" customClassName="BreedImage"/>
@@ -10,6 +11,6 @@
         <attribute name="temperament" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Favorite" positionX="-63" positionY="-18" width="128" height="134"/>
+        <element name="Item" positionX="-63" positionY="-18" width="128" height="149"/>
     </elements>
 </model>

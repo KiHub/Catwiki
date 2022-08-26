@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import CoreData
 
 class BreedFetcher: ObservableObject {
     
@@ -15,6 +16,8 @@ class BreedFetcher: ObservableObject {
     init() {
         fetchAllBreeds()
     }
+    
+ 
     
     func fetchAllBreeds() {
         
