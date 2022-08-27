@@ -26,7 +26,7 @@ struct BreedCard: View {
                                 .frame(width: imageSize)
                                 .clipShape(RoundedRectangle(cornerRadius: 25.0))
                                 .clipped()
-                                .shadow(color: .gray, radius: 5, x: 1, y: 1)
+                           //     .shadow(color: .gray, radius: 5, x: 1, y: 1)
                                 .saturation(0.5)
                                 .scaleEffect(scale)
                         } else if phase.error != nil {
@@ -81,7 +81,7 @@ struct BreedCard: View {
                 
             }
             .frame(width: 180, height: 250)
-            .shadow(radius: 5)
+           // .shadow(color: .black, radius: 5, x: 1, y: 1)
             .cornerRadius(20)
             
             Button {
@@ -92,13 +92,14 @@ struct BreedCard: View {
                 Image(systemName: "heart.fill")
                     .padding(10)
                     .foregroundColor(.white)
-                    .background(.orange)
+                    .background(Color("Color4"))
                     .cornerRadius(50)
                     .shadow(color: .gray, radius: 5, x: 1, y: 1)
                     .saturation(0.7)
             }
         }
-        .shadow(radius: 10)
+        .shadow(color: Color("Color3"), radius: 10, x: 1, y: 1)
+        .opacity(5)
     }
 }
 

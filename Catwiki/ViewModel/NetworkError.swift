@@ -15,22 +15,22 @@ enum NetworkError: Error, CustomStringConvertible {
     case unknown
     
     var localizedDescription: String {
-        //message for users
+        //for users
         switch self {
         case .badURL:
-            return "Sorry, something wrong"
+            return "Sorry, something wrong ❌"
         case .badResponse(_):
-            return "Sorry, connection to our server is failed "
+            return "Sorry, connection to our server is failed ❌"
         case .url(let error):
             return error.localizedDescription
         case .parsing:
-            return "Sorry, something wrong"
+            return "Sorry, something wrong ❌"
         case .unknown:
-            return "Sorry, something wrong"
+            return "Sorry, something wrong ❌"
         }
     }
     var description: String {
-        //message for coder
+        //for coder
         switch self {
         case .badURL:
             return "URL error"

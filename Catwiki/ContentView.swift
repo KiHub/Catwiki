@@ -13,18 +13,32 @@ struct ContentView: View {
     var colums = [GridItem(.adaptive(minimum: 160), spacing: 20)]
     @StateObject var breedFetcher = BreedFetcher()
     
+
+    
     var body: some View {
         
+//        GeometryReader { proxy in
+//            let topEdge = proxy.safeAreaInsets.top
+            
+            
+        
+        
         if breedFetcher.isLoading {
+            
             LoadingView()
         } else if breedFetcher.errorMessage != nil {
             ErrorView(breedFetcher: breedFetcher)
         } else {
+            GeometryReader { proxy in
+                        let topEdge = proxy.safeAreaInsets.top
+                
             TabView {
-                BreedGreedView(breeds: breedFetcher.breeds, colums: colums)
+                BreedGreedView(topEdge: topEdge, breeds: breedFetcher.breeds, colums: colums)
+                    .ignoresSafeArea(.all, edges: .top)
                     .tabItem {
                         Image(systemName: "book")
                         Text("Wiki")
+                            
                     }
                 BreedListViewCD()
                     .tabItem {
@@ -33,7 +47,9 @@ struct ContentView: View {
                     }
             }
         }
+        }
     }
+//}
 }
 
 struct ContentView_Previews: PreviewProvider {

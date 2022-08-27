@@ -26,8 +26,10 @@ struct BreedListViewCD: View {
                 .onDelete(perform: deleteCat)
                 .listRowSeparator(.hidden)
             }
+            .background(Color.red)
             .navigationTitle("CatWiki")
-        }
+            }
+        
     }
     
     private func deleteCat(offsets: IndexSet) {
