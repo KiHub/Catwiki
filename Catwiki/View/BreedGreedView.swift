@@ -9,20 +9,6 @@ import SwiftUI
 
 struct BreedGreedView: View {
     
-  //  let maxHeight = UIScreen.main.bounds.height / 4.8
-    
-    var topEdge: CGFloat
-//    var appearance: UINavigationBarAppearance {
-//        let appearance = UINavigationBarAppearance()
-//        appearance.shadowColor = .clear
-//
-//        appearance.backgroundColor = .orange
-//        return appearance
-//    }
-//    func set() {
-//    UINavigationBar.appearance().scrollEdgeAppearance = appearance
-//            UINavigationBar.appearance().standardAppearance = appearance
-//    }
     let breeds: [Breed]
     @State private var searchText: String = ""
     
@@ -34,26 +20,11 @@ struct BreedGreedView: View {
         }
     }
     var colums = [GridItem(.adaptive(minimum: 160), spacing: 15)]
-//
-//    init() {
-//            //Use this if NavigationBarTitle is with Large Font
-//            UINavigationBar.appearance().largeTitleTextAttributes = [.foregroundColor: UIColor.red]
-//
-//            //Use this if NavigationBarTitle is with displayMode = .inline
-//            UINavigationBar.appearance().titleTextAttributes = [.foregroundColor: UIColor.red]
-//
-//
-//        }
-    
     var body: some View {
-       
-         
-  
+        
         NavigationView {
             ScrollView {
-                
-        //        TopBar(topEdge: topEdge)
-                    
+                //        TopBar(topEdge: topEdge)
                 LazyVGrid(columns: colums, spacing: 20) {
                     ForEach(filtredBreds) { breed in
                         NavigationLink {
@@ -63,13 +34,11 @@ struct BreedGreedView: View {
                         }
                     }
                 }
-                
                 .padding()
-         //   }
-            .navigationBarTitle(Text("CatWiki"))
+                .navigationBarTitle(Text("CatWiki"))
                 .searchable(text: $searchText)
-        }
-            .background(LinearGradient(gradient: Gradient(colors: [.white, Color("Color2"), .white]), startPoint: .top, endPoint: .bottom), ignoresSafeAreaEdges: .top)
+            }
+            .background(LinearGradient(gradient: Gradient(colors: [.white, Color("ColorTabLight"), .white]), startPoint: .top, endPoint: .bottom), ignoresSafeAreaEdges: .all)
             .opacity(10)
             
         }
@@ -79,7 +48,6 @@ struct BreedGreedView: View {
 
 struct BreedGreedView_Previews: PreviewProvider {
     static var previews: some View {
-      //  BreedGreedView(breeds: BreedFetcher.successState().breeds)
         ContentView()
     }
 }

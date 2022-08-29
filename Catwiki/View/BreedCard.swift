@@ -26,7 +26,7 @@ struct BreedCard: View {
                                 .frame(width: imageSize)
                                 .clipShape(RoundedRectangle(cornerRadius: 25.0))
                                 .clipped()
-                           //     .shadow(color: .gray, radius: 5, x: 1, y: 1)
+                            //     .shadow(color: .gray, radius: 5, x: 1, y: 1)
                                 .saturation(0.5)
                                 .scaleEffect(scale)
                         } else if phase.error != nil {
@@ -65,13 +65,11 @@ struct BreedCard: View {
                         .bold()
                     
                     HStack {
-                        
                         ForEach(1..<6) { id in
                             Image(systemName: "circle.fill")
-                                .foregroundColor(breed.energyLevel > id ? Color.accentColor : Color.gray)
+                                .foregroundColor(breed.energyLevel > id ? Color.accentColor : Color("ColorTabLight"))
                         }
                     }
-                    
                 }
                 .padding()
                 .frame(width: 180, alignment: .leading)
@@ -81,7 +79,6 @@ struct BreedCard: View {
                 
             }
             .frame(width: 180, height: 250)
-           // .shadow(color: .black, radius: 5, x: 1, y: 1)
             .cornerRadius(20)
             
             Button {
@@ -92,13 +89,13 @@ struct BreedCard: View {
                 Image(systemName: "heart.fill")
                     .padding(10)
                     .foregroundColor(.white)
-                    .background(Color("Color4"))
+                    .background(Color("ColorTabLight"))
                     .cornerRadius(50)
                     .shadow(color: .gray, radius: 5, x: 1, y: 1)
                     .saturation(0.7)
             }
         }
-        .shadow(color: Color("Color3"), radius: 10, x: 1, y: 1)
+        .shadow(color: Color("ColorLightShadow"), radius: 10, x: 1, y: 1)
         .opacity(5)
     }
 }

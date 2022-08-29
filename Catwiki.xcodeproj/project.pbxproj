@@ -40,6 +40,7 @@
 		0BCFF75A28B9137600F4F5CA /* WaveShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCFF75928B9137600F4F5CA /* WaveShape.swift */; };
 		0BCFF77E28B941F200F4F5CA /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCFF77D28B941F200F4F5CA /* HeaderView.swift */; };
 		0BCFF78028BAA91600F4F5CA /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCFF77F28BAA91600F4F5CA /* TopBar.swift */; };
+		0BCFF78428BB749200F4F5CA /* FloatingBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCFF78328BB749100F4F5CA /* FloatingBar.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -96,6 +97,7 @@
 		0BCFF75928B9137600F4F5CA /* WaveShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WaveShape.swift; sourceTree = "<group>"; };
 		0BCFF77D28B941F200F4F5CA /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		0BCFF77F28BAA91600F4F5CA /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
+		0BCFF78328BB749100F4F5CA /* FloatingBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingBar.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 				0B86BAD5289AC3A200F3009E /* ErrorView.swift */,
 				0B86BAD7289AC45D00F3009E /* LoadingView.swift */,
 				0BCFF77F28BAA91600F4F5CA /* TopBar.swift */,
+				0BCFF78328BB749100F4F5CA /* FloatingBar.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -390,6 +393,7 @@
 				0BCFF75828B9133600F4F5CA /* CustomNavigationView.swift in Sources */,
 				0B86BAD6289AC3A200F3009E /* ErrorView.swift in Sources */,
 				0BCFF75528B8FB8800F4F5CA /* HostingController.swift in Sources */,
+				0BCFF78428BB749200F4F5CA /* FloatingBar.swift in Sources */,
 				0B86BAD8289AC45D00F3009E /* LoadingView.swift in Sources */,
 				0B6F5F0F28B0F6A500EE7A17 /* Item+CoreDataClass.swift in Sources */,
 				0B86BADA289AC9C600F3009E /* NetworkError.swift in Sources */,

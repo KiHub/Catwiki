@@ -16,6 +16,7 @@ struct BreedListViewCD: View {
     var body: some View {
         NavigationView {
             List {
+                if cat.count != 0 {
                 ForEach(cat) { catBreed in
                     NavigationLink {
                         BreedDetailViewCD(breed: catBreed)
@@ -25,11 +26,16 @@ struct BreedListViewCD: View {
                 }
                 .onDelete(perform: deleteCat)
                 .listRowSeparator(.hidden)
+                } else {
+                    Text("Right here, you can save your favorite cat breeds.")
+                    Text("Just push ❤️ on the breed page")
+                        .listRowSeparator(.hidden)
+                }
             }
-            .background(Color.red)
+            .listRowBackground(Color.green)
+
             .navigationTitle("CatWiki")
-            }
-        
+        }
     }
     
     private func deleteCat(offsets: IndexSet) {

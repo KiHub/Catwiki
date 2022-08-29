@@ -85,6 +85,7 @@ struct BreedDetailViewCD: View {
                     .navigationBarTitleDisplayMode(.inline)
             }
         }
+        .background(LinearGradient(gradient: Gradient(colors: [.white, Color("ColorTabLight"), .white]), startPoint: .top, endPoint: .bottom), ignoresSafeAreaEdges: .all)
     }
 }
 

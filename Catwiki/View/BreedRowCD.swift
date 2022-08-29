@@ -65,9 +65,3 @@ struct BreedRowCD: View {
     }
 }
 
-//struct BreedRowCD_Previews: PreviewProvider {
-//    static var previews: some View {
-//        BreedRowCD(breed: Breed.example1())
-//            .previewLayout(.fixed(width: 300, height: 200))
-//    }
-//}

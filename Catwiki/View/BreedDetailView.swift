@@ -87,7 +87,7 @@ struct BreedDetailView: View {
                     .navigationBarTitleDisplayMode(.inline)
             }
         }
-        
+        .background(LinearGradient(gradient: Gradient(colors: [.white, Color("ColorTabLight"), .white]), startPoint: .top, endPoint: .bottom), ignoresSafeAreaEdges: .all)
         .toolbar {
             ToolbarItemGroup(placement: .navigationBarTrailing) {
                 Button {
