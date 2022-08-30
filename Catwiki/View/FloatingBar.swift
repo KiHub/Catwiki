@@ -13,6 +13,7 @@ struct FloatingTabBar: View {
     var tabs = ["home", "save"]
     @StateObject var breedFetcher = BreedFetcher()
     @State var selectedTab = "home"
+  //  @State var shouldShowOnboarding: Bool = true
     
     // Location of each curve
     @State var xAxis: CGFloat = 0
@@ -36,6 +37,9 @@ struct FloatingTabBar: View {
                     .tag("save")
                     
             }
+//            .fullScreenCover(item: $shouldShowOnboarding) {
+//                Onboarding(showOnboarding: <#Binding<Bool>#>)
+//            }
             // custom tab bar
             HStack(spacing: 0) {
                 ForEach(tabs, id: \.self) { image in
