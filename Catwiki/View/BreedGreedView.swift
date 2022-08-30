@@ -24,7 +24,9 @@ struct BreedGreedView: View {
         
         NavigationView {
             ScrollView {
-              //          TopBar(topEdge: topEdge)
+                if searchText.count == 0 {
+                TopBar(breeds: breeds.shuffled())
+                }
                 LazyVGrid(columns: colums, spacing: 20) {
                     ForEach(filtredBreds) { breed in
                         NavigationLink {

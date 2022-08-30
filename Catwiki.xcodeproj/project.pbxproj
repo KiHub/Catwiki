@@ -38,6 +38,7 @@
 		0BCFF78628BE0C9800F4F5CA /* CustomShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCFF78528BE0C9700F4F5CA /* CustomShape.swift */; };
 		0BCFF78928BE387500F4F5CA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0BCFF78828BE387500F4F5CA /* LaunchScreen.storyboard */; };
 		0BCFF78B28BE3F2A00F4F5CA /* Onboarding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCFF78A28BE3F2A00F4F5CA /* Onboarding.swift */; };
+		0BCFF78F28BEB26200F4F5CA /* BreedCardCircle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCFF78E28BEB26200F4F5CA /* BreedCardCircle.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -93,6 +94,7 @@
 		0BCFF78728BE37F900F4F5CA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		0BCFF78828BE387500F4F5CA /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0BCFF78A28BE3F2A00F4F5CA /* Onboarding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Onboarding.swift; sourceTree = "<group>"; };
+		0BCFF78E28BEB26200F4F5CA /* BreedCardCircle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedCardCircle.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -191,6 +193,7 @@
 				0BCFF75028B8E64300F4F5CA /* BreedDetailViewCD.swift */,
 				0B86BADF289BABB300F3009E /* BreedDetailView.swift */,
 				0B86BAED289CEB4600F3009E /* BreedCard.swift */,
+				0BCFF78E28BEB26200F4F5CA /* BreedCardCircle.swift */,
 				0B6F5F1328B12C6900EE7A17 /* BreedRowCD.swift */,
 				0B86BAD5289AC3A200F3009E /* ErrorView.swift */,
 				0B86BAD7289AC45D00F3009E /* LoadingView.swift */,
@@ -376,6 +379,7 @@
 				0B86BAFD289D7C5A00F3009E /* Fav.xcdatamodeld in Sources */,
 				0B86BAE0289BABB300F3009E /* BreedDetailView.swift in Sources */,
 				0B86BAA3289ABBD500F3009E /* ContentView.swift in Sources */,
+				0BCFF78F28BEB26200F4F5CA /* BreedCardCircle.swift in Sources */,
 				0B86BAEE289CEB4600F3009E /* BreedCard.swift in Sources */,
 				0BCFF74D28B8D97F00F4F5CA /* DataManager.swift in Sources */,
 				0B86BAD2289ABE5D00F3009E /* BreedFetcher.swift in Sources */,
@@ -545,7 +549,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Catwiki/Preview Content\"";
 				DEVELOPMENT_TEAM = 327B2F3V2J;
 				ENABLE_PREVIEWS = YES;
@@ -558,6 +562,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -567,7 +572,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -577,7 +582,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 1;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_ASSET_PATHS = "\"Catwiki/Preview Content\"";
 				DEVELOPMENT_TEAM = 327B2F3V2J;
 				ENABLE_PREVIEWS = YES;
@@ -590,6 +595,7 @@
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -599,7 +605,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
