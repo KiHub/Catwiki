@@ -91,9 +91,10 @@ struct BreedCard: View {
                     .foregroundColor(.white)
                     .background(Color("ColorTabLight"))
                     .cornerRadius(50)
-                    .shadow(color: .gray, radius: 5, x: 1, y: 1)
+                  //  .shadow(color: .gray, radius: 5, x: 1, y: 1)
                     .saturation(0.7)
             }
+           
         }
         .shadow(color: Color("ColorLightShadow"), radius: 10, x: 1, y: 1)
         .opacity(5)

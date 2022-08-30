@@ -41,6 +41,7 @@
 		0BCFF77E28B941F200F4F5CA /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCFF77D28B941F200F4F5CA /* HeaderView.swift */; };
 		0BCFF78028BAA91600F4F5CA /* TopBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCFF77F28BAA91600F4F5CA /* TopBar.swift */; };
 		0BCFF78428BB749200F4F5CA /* FloatingBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCFF78328BB749100F4F5CA /* FloatingBar.swift */; };
+		0BCFF78628BE0C9800F4F5CA /* CustomShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0BCFF78528BE0C9700F4F5CA /* CustomShape.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +99,7 @@
 		0BCFF77D28B941F200F4F5CA /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 		0BCFF77F28BAA91600F4F5CA /* TopBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TopBar.swift; sourceTree = "<group>"; };
 		0BCFF78328BB749100F4F5CA /* FloatingBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FloatingBar.swift; sourceTree = "<group>"; };
+		0BCFF78528BE0C9700F4F5CA /* CustomShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomShape.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -230,6 +232,7 @@
 			isa = PBXGroup;
 			children = (
 				0B86BAE2289BDB8000F3009E /* ButtonStyle.swift */,
+				0BCFF78528BE0C9700F4F5CA /* CustomShape.swift */,
 				0BCFF74E28B8E22B00F4F5CA /* Time.swift */,
 				0BCFF77D28B941F200F4F5CA /* HeaderView.swift */,
 				0BCFF75728B9133600F4F5CA /* CustomNavigationView.swift */,
@@ -390,6 +393,7 @@
 				0B86BAD2289ABE5D00F3009E /* BreedFetcher.swift in Sources */,
 				0BCFF77E28B941F200F4F5CA /* HeaderView.swift in Sources */,
 				0B6F5F1028B0F6A500EE7A17 /* Item+CoreDataProperties.swift in Sources */,
+				0BCFF78628BE0C9800F4F5CA /* CustomShape.swift in Sources */,
 				0BCFF75828B9133600F4F5CA /* CustomNavigationView.swift in Sources */,
 				0B86BAD6289AC3A200F3009E /* ErrorView.swift in Sources */,
 				0BCFF75528B8FB8800F4F5CA /* HostingController.swift in Sources */,
