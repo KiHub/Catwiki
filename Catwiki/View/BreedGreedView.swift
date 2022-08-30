@@ -24,7 +24,7 @@ struct BreedGreedView: View {
         
         NavigationView {
             ScrollView {
-                //        TopBar(topEdge: topEdge)
+              //          TopBar(topEdge: topEdge)
                 LazyVGrid(columns: colums, spacing: 20) {
                     ForEach(filtredBreds) { breed in
                         NavigationLink {
@@ -40,7 +40,6 @@ struct BreedGreedView: View {
             }
             .background(LinearGradient(gradient: Gradient(colors: [.white, Color("ColorTabLight"), .white]), startPoint: .top, endPoint: .bottom), ignoresSafeAreaEdges: .all)
             .opacity(10)
-            
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }

@@ -22,14 +22,14 @@ struct BreedRowCD: View {
                             .frame(width: imageSize, height: imageSize)
                             .clipShape(RoundedRectangle(cornerRadius: 25.0))
                             .clipped()
-                            .shadow(color: .gray, radius: 10, x: 5, y: 5)
+                            .shadow(color: Color("ColorTab"), radius: 10, x: 5, y: 5)
                             .saturation(0.5)
                             .scaleEffect(scale)
                     } else if phase.error != nil {
                         ZStack {
                             Color.red.frame(width: imageSize, height: imageSize)
                                 .clipShape(RoundedRectangle(cornerRadius: 25.0))
-                                .shadow(color: .gray, radius: 10, x: 5, y: 5)
+                                .shadow(color: Color("ColorTab"), radius: 10, x: 5, y: 5)
                                 .saturation(0.5)
                                 .scaleEffect(scale)
                             Text("❌")
@@ -46,7 +46,7 @@ struct BreedRowCD: View {
                 ZStack {
                     Color.gray.frame(width: imageSize, height: imageSize)
                         .clipShape(RoundedRectangle(cornerRadius: 25.0))
-                        .shadow(color: .gray, radius: 10, x: 5, y: 5)
+                        .shadow(color: Color("ColorTab"), radius: 10, x: 5, y: 5)
                         .saturation(0.5)
                         .scaleEffect(scale)
                     Text("🐱")

@@ -37,9 +37,7 @@ struct FloatingTabBar: View {
                     .tag("save")
                     
             }
-//            .fullScreenCover(item: $shouldShowOnboarding) {
-//                Onboarding(showOnboarding: <#Binding<Bool>#>)
-//            }
+
             // custom tab bar
             HStack(spacing: 0) {
                 ForEach(tabs, id: \.self) { image in

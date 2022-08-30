@@ -34,7 +34,6 @@ class BreedFetcher: ObservableObject {
                 }
             }
         }
-        
     }
     
     static func errorState() -> BreedFetcher {

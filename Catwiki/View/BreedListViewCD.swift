@@ -33,7 +33,6 @@ struct BreedListViewCD: View {
                 }
             }
             .listRowBackground(Color.green)
-
             .navigationTitle("CatWiki")
         }
     }
