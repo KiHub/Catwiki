@@ -82,7 +82,6 @@ struct BreedDetailView: View {
                                 .foregroundColor(breed.energyLevel > id ? Color.accentColor : Color.gray)
                         }
                     }
-                    
                 }.padding()
                     .navigationBarTitleDisplayMode(.inline)
             }
