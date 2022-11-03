@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0B552CA82913C91C00F4764C /* Spinner.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B552CA72913C91C00F4764C /* Spinner.swift */; };
 		0B6F5F0F28B0F6A500EE7A17 /* Item+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6F5F0D28B0F6A500EE7A17 /* Item+CoreDataClass.swift */; };
 		0B6F5F1028B0F6A500EE7A17 /* Item+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6F5F0E28B0F6A500EE7A17 /* Item+CoreDataProperties.swift */; };
 		0B6F5F1228B12C3200EE7A17 /* BreedListViewCD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B6F5F1128B12C3200EE7A17 /* BreedListViewCD.swift */; };
@@ -59,6 +60,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0B552CA72913C91C00F4764C /* Spinner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Spinner.swift; sourceTree = "<group>"; };
 		0B6F5F0D28B0F6A500EE7A17 /* Item+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataClass.swift"; sourceTree = "<group>"; };
 		0B6F5F0E28B0F6A500EE7A17 /* Item+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Item+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		0B6F5F1128B12C3200EE7A17 /* BreedListViewCD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedListViewCD.swift; sourceTree = "<group>"; };
@@ -231,6 +233,7 @@
 			isa = PBXGroup;
 			children = (
 				0B86BAE2289BDB8000F3009E /* ButtonStyle.swift */,
+				0B552CA72913C91C00F4764C /* Spinner.swift */,
 				0BCFF78528BE0C9700F4F5CA /* CustomShape.swift */,
 			);
 			path = Helpers;
@@ -368,6 +371,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0B6F5F1228B12C3200EE7A17 /* BreedListViewCD.swift in Sources */,
+				0B552CA82913C91C00F4764C /* Spinner.swift in Sources */,
 				0B86BAE3289BDB8000F3009E /* ButtonStyle.swift in Sources */,
 				0B86BADC289AD70400F3009E /* NetworkService.swift in Sources */,
 				0B86BAEC289CEB1B00F3009E /* BreedGreedView.swift in Sources */,
@@ -549,7 +553,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Catwiki/Preview Content\"";
 				DEVELOPMENT_TEAM = 327B2F3V2J;
 				ENABLE_PREVIEWS = YES;
@@ -582,7 +586,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_ASSET_PATHS = "\"Catwiki/Preview Content\"";
 				DEVELOPMENT_TEAM = 327B2F3V2J;
 				ENABLE_PREVIEWS = YES;

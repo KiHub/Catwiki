@@ -41,7 +41,7 @@ struct BreedGreedView: View {
                 .searchable(text: $searchText)
             }
             .background(LinearGradient(gradient: Gradient(colors: [.white, Color("ColorTabLight"), .white]), startPoint: .top, endPoint: .bottom), ignoresSafeAreaEdges: .all)
-            .opacity(10)
+            .opacity(10) 
         }
         .navigationViewStyle(StackNavigationViewStyle())
     }

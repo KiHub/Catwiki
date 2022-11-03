@@ -21,16 +21,25 @@ struct BreedCard: View {
                 if let url = breed.image?.url {
                     AsyncImage(url: URL(string: url)) { phase in
                         if let image = phase.image {
-                            image.resizable()
-                                .scaledToFill()
-                                .frame(width: imageSize)
-                                .clipShape(RoundedRectangle(cornerRadius: 25.0))
-                                .clipped()
-                            //     .shadow(color: .gray, radius: 5, x: 1, y: 1)
-                                .saturation(0.5)
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 25)
+                                    
+                                    .foregroundColor(Color("ColorLightShadow"))
+                                    .scaleEffect(scale + 0.2)
+                                    .opacity(50)
+                                  
+                                image.resizable()
+                                    .scaledToFill()
+                                    .frame(width: imageSize)
+                                    .clipShape(RoundedRectangle(cornerRadius: 25.0))
+                                    .clipped()
+                                //     .shadow(color: .gray, radius: 5, x: 1, y: 1)
+                                    .saturation(0.5)
                                 .scaleEffect(scale)
+                            }
                         } else if phase.error != nil {
                             ZStack {
+                                
                                 Color.red.frame(width: imageSize)
                                     .clipShape(RoundedRectangle(cornerRadius: 25.0))
                                     .shadow(color: .gray, radius: 5, x: 1, y: 1)
@@ -42,8 +51,18 @@ struct BreedCard: View {
                                     .frame(width: imageSize)
                             }
                         } else {
-                            ProgressView()
+                          
+                            ZStack {
+                                RoundedRectangle(cornerRadius: 25)
+                                    
+                                    .foregroundColor(Color("ColorLightShadow"))
+                                    .scaleEffect(scale + 0.2)
+                                    .opacity(50)
+                                ProgressView()
+                            
+                                    .padding(150)
                                 .frame(width: imageSize)
+                            }
                         }
                     }
                 } else {

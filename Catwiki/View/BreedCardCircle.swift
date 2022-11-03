@@ -13,7 +13,7 @@ struct BreedCardCircle: View {
  
     let breed: Breed
     let imageSize: CGFloat =  UIScreen.main.bounds.height / 6
-    let scale: CGFloat = 0.8
+    let scale: CGFloat = 0.7
     
     var body: some View {
         ZStack(alignment: .topTrailing) {
@@ -22,16 +22,24 @@ struct BreedCardCircle: View {
                 if let url = breed.image?.url {
                     AsyncImage(url: URL(string: url)) { phase in
                         if let image = phase.image {
-                            image.resizable()
-                                .frame(width: imageSize)
-                                .background(Color("ColorTabLight"))
-                                .clipShape(Circle())
-                                .clipped()
-                                .scaleEffect()
-                                .saturation(0.5)
-                                .scaleEffect(scale)
+                            ZStack {
+                                Circle()
+                                    .foregroundColor(Color("ColorTab"))
+                                    .scaleEffect(scale + 0.1)
+                                image
+                                    .resizable()
+                                    .aspectRatio(contentMode: .fill)
+                                    .frame(width: imageSize)
+                                    .background(Color("ColorTabLight"))
+                                    .clipShape(Circle())
+                                    .saturation(0.5)
+                                    .scaleEffect(scale)
+                            }
                         } else if phase.error != nil {
                             ZStack {
+                                Circle()
+                                    .foregroundColor(Color("ColorTab"))
+                                    .scaleEffect(scale + 0.1)
                                 Color.red.frame(width: imageSize)
                                     .clipShape(Circle())
                                     .saturation(0.5)
@@ -42,12 +50,20 @@ struct BreedCardCircle: View {
                                     .frame(width: imageSize)
                             }
                         } else {
+                            ZStack {
+                            Circle()
+                                .foregroundColor(Color("ColorTab"))
+                                .scaleEffect(scale + 0.1)
                             ProgressView()
                                 .frame(width: imageSize)
+                            }
                         }
                     }
                 } else {
                     ZStack {
+                        Circle()
+                            .foregroundColor(Color("ColorTab"))
+                            .scaleEffect(scale + 0.1)
                         Color.gray.frame(width: imageSize)
                             .clipShape(Circle())
                             .saturation(0.5)
