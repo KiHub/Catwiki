@@ -30,15 +30,15 @@ struct FloatingTabBar: View {
                 BreedGreedView(breeds: breedFetcher.breeds, colums: colums)
                     .ignoresSafeArea(.all, edges: .all)
                     .tag("home")
-                    
                 
                 BreedListViewCD()
                     .ignoresSafeArea(.all, edges: .all)
                     .tag("save")
+                
+               
                     
             }
 
-            // custom tab bar
             HStack(spacing: 0) {
                 ForEach(tabs, id: \.self) { image in
                     GeometryReader { reader in
@@ -77,7 +77,6 @@ struct FloatingTabBar: View {
             .padding(.horizontal)
             // Bottom edge....
             .padding(.bottom, 35)
-          //  .padding(.bottom , UIApplication.shared.windows.first?.safeAreaInsets.bottom)
         }
         .ignoresSafeArea(.all, edges: .all)
     }
